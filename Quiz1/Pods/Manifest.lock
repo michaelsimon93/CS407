@@ -1,0 +1,10 @@
+PODS:
+  - AFBlurSegue (1.2.1)
+
+DEPENDENCIES:
+  - AFBlurSegue (~> 1.2.1)
+
+SPEC CHECKSUMS:
+  AFBlurSegue: 27e55f015360f4e11117d2c3a959dbb5316eef78
+
+COCOAPODS: 0.39.0
