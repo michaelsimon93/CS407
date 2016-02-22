@@ -28,7 +28,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rSG-15-7GB" kind="show" id="L7J-3W-MEK"/>
+                                    <segue destination="rSG-15-7GB" kind="show" identifier="segueStart" id="L7J-3W-MEK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,24 +62,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Who wears #21 on the Chicago Bulls?" translatesAutoresizingMaskIntoConstraints="NO" id="XTH-1u-Ut6">
-                                <rect key="frame" x="170" y="137" width="261" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-e1-nDZ">
                                 <rect key="frame" x="281" y="323" width="39" height="30"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ffd-7w-hcL" kind="presentation" id="eSW-mJ-F9W"/>
+                                    <segue destination="Ffd-7w-hcL" kind="presentation" identifier="segueNext" id="eSW-mJ-F9W"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What number is Jimmy Butler?" translatesAutoresizingMaskIntoConstraints="NO" id="XTH-1u-Ut6">
+                                <rect key="frame" x="195" y="135" width="210" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="q1Answer" destination="90U-RN-NhX" id="i2t-Rn-loD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMQ-M3-Ws2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,34 +101,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER ANSWER HERE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzw-rt-d8h">
-                                <rect key="frame" x="217" y="285" width="167" height="30"/>
+                                <rect key="frame" x="217" y="323" width="167" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What team logo is this?" translatesAutoresizingMaskIntoConstraints="NO" id="5Gi-Sb-ces">
-                                <rect key="frame" x="219" y="227" width="162" height="34"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What team logo is this? " translatesAutoresizingMaskIntoConstraints="NO" id="5Gi-Sb-ces">
+                                <rect key="frame" x="219" y="227" width="163" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blackhawks.png" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-Ww-InX">
-                                <rect key="frame" x="180" y="91" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blackhawksLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-Ww-InX">
+                                <rect key="frame" x="183" y="47" width="234" height="172"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-HM-0D7">
-                                <rect key="frame" x="271" y="323" width="58" height="30"/>
+                                <rect key="frame" x="271" y="361" width="58" height="30"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cpO-aI-fOb" kind="custom" customClass="AFBlurSegue" id="AiZ-P9-Btn"/>
+                                    <segue destination="cpO-aI-fOb" kind="custom" identifier="segueSubmit" customClass="AFBlurSegue" id="AiZ-P9-Btn"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(All lower-case. Include city and mascot)" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-A7-NTh">
+                                <rect key="frame" x="163" y="258" width="275" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="a2B-Ww-InX" secondAttribute="width" id="8Bs-Wn-iuB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="q2Answer" destination="dzw-rt-d8h" id="UbV-Jq-Lu3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGM-xs-6KO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,24 +154,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Number of correct answers:" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-cR-AQQ">
-                                <rect key="frame" x="157" y="154" width="287" height="46"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCH-UV-Kkk">
                                 <rect key="frame" x="267" y="285" width="66" height="30"/>
                                 <state key="normal" title="RESTART">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="gzV-ZR-DaW"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="segueRestart" id="gzV-ZR-DaW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CorrectAnswers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41D-zW-hos">
+                                <rect key="frame" x="239" y="174" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Correct Answers:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwx-JM-1UT">
+                                <rect key="frame" x="191" y="145" width="219" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="CorrectAnswers" destination="41D-zW-hos" id="270-ZG-Lh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8g-6H-XQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,6 +188,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blackhawks.png" width="843" height="547"/>
+        <image name="blackhawksLogo.jpg" width="225" height="225"/>
     </resources>
 </document>

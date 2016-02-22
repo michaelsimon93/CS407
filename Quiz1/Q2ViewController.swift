@@ -10,6 +10,10 @@ import UIKit
 
 class Q2ViewController: UIViewController {
 
+    var q1Correct: Bool?
+    
+    @IBOutlet weak var q2Answer: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +26,25 @@ class Q2ViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let vcSummary = segue.destinationViewController as! SummaryViewController;
+        
+        vcSummary.q1Correct = self.q1Correct;
+        
+        if (q2Answer.text == "chicago blackhawks") {
+            vcSummary.q2Correct = true;
+        } else {
+            vcSummary.q2Correct = false;
+        }
+        
     }
-    */
+
 
 }

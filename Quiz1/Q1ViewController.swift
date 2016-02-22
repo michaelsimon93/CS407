@@ -10,6 +10,8 @@ import UIKit
 
 class Q1ViewController: UIViewController {
 
+    @IBOutlet weak var q1Answer: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +24,24 @@ class Q1ViewController: UIViewController {
     }
     
 
-    /*
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "segueNext") {
+            let vcQ2 = segue.destinationViewController as! Q2ViewController;
+            if (q1Answer.text == "21") {
+                vcQ2.q1Correct  = true;
+            } else {
+                vcQ2.q1Correct = false;
+            }
+        }
     }
-    */
+
 
 }

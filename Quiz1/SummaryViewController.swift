@@ -9,11 +9,25 @@
 import UIKit
 
 class SummaryViewController: UIViewController {
-
+    
+    var q2Correct: Bool?
+    var q1Correct: Bool?
+    
+    @IBOutlet weak var CorrectAnswers: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if (q1Correct! && q2Correct! == true) {
+            CorrectAnswers.text = "2";
+        } else if (q1Correct! == true && q2Correct! == false) {
+            CorrectAnswers.text = "1";
+        } else if (q1Correct! == false && q2Correct! == true) {
+            CorrectAnswers.text = "1";
+        } else {
+            CorrectAnswers.text = "0";
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,6 +10,7 @@
 		3023C7001C7828A3001B6B7E /* Q1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3023C6FF1C7828A3001B6B7E /* Q1ViewController.swift */; };
 		3023C7021C7828B0001B6B7E /* Q2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3023C7011C7828B0001B6B7E /* Q2ViewController.swift */; };
 		3023C7041C7828BA001B6B7E /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3023C7031C7828BA001B6B7E /* SummaryViewController.swift */; };
+		30A57E5E1C7BA1EB001E6732 /* blackhawksLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30A57E5D1C7BA1EB001E6732 /* blackhawksLogo.jpg */; };
 		30EA691E1C782745008B801D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA691D1C782745008B801D /* AppDelegate.swift */; };
 		30EA69201C782745008B801D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA691F1C782745008B801D /* ViewController.swift */; };
 		30EA69231C782745008B801D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EA69211C782745008B801D /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		3023C6FF1C7828A3001B6B7E /* Q1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Q1ViewController.swift; sourceTree = "<group>"; };
 		3023C7011C7828B0001B6B7E /* Q2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Q2ViewController.swift; sourceTree = "<group>"; };
 		3023C7031C7828BA001B6B7E /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		30A57E5D1C7BA1EB001E6732 /* blackhawksLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackhawksLogo.jpg; sourceTree = "<group>"; };
 		30EA69181C782745008B801D /* Quiz1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EA691C1C782745008B801D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30EA691D1C782745008B801D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		30EA690F1C782745008B801D = {
 			isa = PBXGroup;
 			children = (
+				30A57E5D1C7BA1EB001E6732 /* blackhawksLogo.jpg */,
 				30EA691A1C782745008B801D /* Quiz1 */,
 				30EA69301C782745008B801D /* Quiz1Tests */,
 				30EA69191C782745008B801D /* Products */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30EA69231C782745008B801D /* Main.storyboard in Resources */,
+				30A57E5E1C7BA1EB001E6732 /* blackhawksLogo.jpg in Resources */,
 				30EA69281C782745008B801D /* LaunchScreen.xib in Resources */,
 				30EA69251C782745008B801D /* Images.xcassets in Resources */,
 			);
